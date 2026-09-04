@@ -1,0 +1,791 @@
+/* ============================================================
+                   1. RÉINITIALISATION ET VARIABLES
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1a365d;      /* Bleu foncé NEXMID */
+    --secondary: #2b6cb0;    /* Bleu moyen */
+    --accent: #ecc94b;       /* Or */
+    --light: #f7fafc;        /* Blanc cassé */
+    --dark: #2d3748;         /* Texte foncé */
+    --gray: #718096;         /* Texte gris */
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --radius: 12px;
+    --transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================================
+                   2. BOUTONS
+   ============================================================ */
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(236, 201, 75, 0.4);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(43, 108, 176, 0.4);
+}
+
+/* ============================================================
+                   3. EN-TÊTE ET NAVIGATION
+   ============================================================ */
+
+header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* ============================================================
+                   4. SECTION HERO (Accueil)
+   ============================================================ */
+
+.hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: rgba(236, 201, 75, 0.05);
+    border-radius: 50%;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* ============================================================
+                   5. SERVICES (Accueil)
+   ============================================================ */
+
+.services-preview {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.services-preview h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.service-card a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.service-card a:hover {
+    color: var(--accent);
+}
+
+/* ============================================================
+                   6. PAGE HERO (Services, À propos, Contact)
+   ============================================================ */
+
+.page-hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ============================================================
+                   7. SERVICES DÉTAILLÉS (services.html)
+   ============================================================ */
+
+.services-detail {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.service-block {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-block:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-block-content {
+    max-width: 800px;
+}
+
+.service-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.3;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.service-block h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.service-block p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.service-block ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.service-block ul li {
+    padding: 6px 0;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.service-block ul li::before {
+    content: '▸ ';
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* ============================================================
+                   8. À PROPOS — HISTOIRE
+   ============================================================ */
+
+.about-story {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: var(--dark);
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    height: auto;
+}
+
+/* ============================================================
+                   9. À PROPOS — MISSION ET VALEURS
+   ============================================================ */
+
+.about-mission {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.mission-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.mission-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.mission-card ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.mission-card ul li {
+    padding: 4px 0;
+    color: var(--dark);
+}
+
+/* ============================================================
+                   10. À PROPOS — LE FONDATEUR
+   ============================================================ */
+
+.about-founder {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.about-founder h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.founder-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: var(--light);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.founder-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    flex-shrink: 0;
+}
+
+.founder-info h3 {
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+
+.founder-title {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.founder-info p {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+/* ============================================================
+                   11. CHIFFRES CLÉS
+   ============================================================ */
+
+.about-numbers {
+    padding: 60px 0;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.about-numbers h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.number-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.number-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* ============================================================
+                   12. CONTACT
+   ============================================================ */
+
+.contact-section {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    margin-top: 30px;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.contact-details li span {
+    font-size: 1.3rem;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ============================================================
+                   13. PIED DE PAGE
+   ============================================================ */
+
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-info h4,
+.footer-links h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.footer-info p {
+    opacity: 0.8;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ============================================================
+                   14. RESPONSIVE — TABLETTE
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+                   15. RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        padding: 20px;
+        width: 100%;
+        gap: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 15px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-block {
+        padding: 25px;
+    }
+
+    .service-block h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-numbers .numbers-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============================================================
+                   16. RESPONSIVE — PETIT MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .numbers-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .founder-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .service-block {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .number {
+        font-size: 2.2rem;
+    }
+}
