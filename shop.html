@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXMID SHOP — Boutique Informatique</title>
+    <meta name="description" content="Boutique informatique : ordinateurs, accessoires, stockage, réseau, logiciels et plus encore.">
+    
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="images/38016.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/38016.jpg" alt="NEXMID GROUP">
+                <span>NEXMID GROUP</span>
+            </a>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="formation.html">Formation</a></li>
+                    <li><a href="shop.html" class="active">Boutique</a></li>
+                    <li><a href="about.html">Mon histoire</a></li>
+                    <li><a href="partenariat.html">Partenariat</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fi fi-rr-menu-burger"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>NEXMID SHOP</h1>
+            <p>Tout le matériel informatique, accessoires, logiciels et outils — au même endroit</p>
+        </div>
+    </section>
+
+    <section class="shop-filters">
+        <div class="container">
+            <div class="filters-grid">
+
+                <div class="filter-group">
+                    <label for="filterCategory">Catégorie</label>
+                    <select id="filterCategory">
+                        <option value="all">Toutes</option>
+                        <option value="ordinateur">Ordinateurs</option>
+                        <option value="accessoire">Accessoires</option>
+                        <option value="stockage">Stockage</option>
+                        <option value="reseau">Réseau</option>
+                        <option value="logiciel">Logiciels</option>
+                        <option value="composant">Composants</option>
+                        <option value="peripherique">Périphériques</option>
+                        <option value="autre">Autres</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterSousCategorie">Sous-catégorie</label>
+                    <select id="filterSousCategorie">
+                        <option value="all">Toutes</option>
+                        <option value="pc-portable">PC Portables</option>
+                        <option value="pc-fixe">PC Fixes</option>
+                        <option value="souris">Souris</option>
+                        <option value="clavier">Claviers</option>
+                        <option value="casque">Casques & Écouteurs</option>
+                        <option value="cable">Câbles & Adaptateurs</option>
+                        <option value="sacoche">Sacoches & Housses</option>
+                        <option value="cle-usb">Clés USB</option>
+                        <option value="disque-dur">Disques durs</option>
+                        <option value="ssd">SSD</option>
+                        <option value="carte-sd">Cartes SD</option>
+                        <option value="routeur">Routeurs</option>
+                        <option value="switch">Switchs</option>
+                        <option value="antivirus">Antivirus</option>
+                        <option value="bureautique">Bureautique</option>
+                        <option value="os">Systèmes d'exploitation</option>
+                        <option value="ram">Barrettes RAM</option>
+                        <option value="carte-graphique">Cartes graphiques</option>
+                        <option value="imprimante">Imprimantes</option>
+                        <option value="ecran">Écrans</option>
+                        <option value="webcam">Webcams</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterBudget">Budget max</label>
+                    <select id="filterBudget">
+                        <option value="all">Tous</option>
+                        <option value="10000">Moins de 10 000 FCFA</option>
+                        <option value="25000">Moins de 25 000 FCFA</option>
+                        <option value="50000">Moins de 50 000 FCFA</option>
+                        <option value="100000">Moins de 100 000 FCFA</option>
+                        <option value="200000">Moins de 200 000 FCFA</option>
+                        <option value="500000">Moins de 500 000 FCFA</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterEtat">État</label>
+                    <select id="filterEtat">
+                        <option value="all">Tous</option>
+                        <option value="neuf">Neuf</option>
+                        <option value="reconditionne">Reconditionné</option>
+                        <option value="occasion">Occasion</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterMarque">Marque</label>
+                    <select id="filterMarque">
+                        <option value="all">Toutes</option>
+                        <option value="hp">HP</option>
+                        <option value="dell">Dell</option>
+                        <option value="lenovo">Lenovo</option>
+                        <option value="asus">Asus</option>
+                        <option value="acer">Acer</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="kingston">Kingston</option>
+                        <option value="sandisk">SanDisk</option>
+                        <option value="logitech">Logitech</option>
+                        <option value="microsoft">Microsoft</option>
+                        <option value="autre">Autres</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="filter-reset">
+                <button id="resetFilters" class="btn btn-secondary btn-sm">
+                    <i class="fi fi-rr-refresh"></i> Réinitialiser
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="shop-products">
+        <div class="container">
+            <div class="product-grid" id="productGrid">
+
+                <div class="product-card" 
+                    data-category="ordinateur" 
+                    data-souscategorie="pc-portable" 
+                    data-budget="129000" 
+                    data-etat="reconditionne" 
+                    data-marque="hp">
+                    <div class="product-image">
+                    <img src="images/produits/hp-255-g7-1.jpeg" alt="HP 255 G7">
+                    <span class="product-badge badge-reconditionne">Reconditionné</span>
+                    </div>
+                    <div class="product-info">
+                    <h3>HP 255 G7</h3>
+                    <p class="product-specs">AMD Athlon Silver 3050U, 4 Go RAM, 256 Go SSD + 500 Go HDD</p>
+                    <p class="product-price">129 000 FCFA</p>
+                    <a href="product.html?id=1" class="btn btn-secondary btn-sm">Voir le produit</a>
+                    </div>
+                </div>
+
+            </div>
+            
+
+            <div id="noResults" class="no-results" style="display: none;">
+                Aucun produit ne correspond à vos critères.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-info">
+                    <h4>NEXMID GROUP</h4>
+                    <p>Abomey-Calavi, Bénin</p>
+                    <p>
+                        <i class="fi fi-rr-phone-call"></i>
+                        +229 01 53 21 62 76
+                    </p>
+                    <p>
+                        <i class="fi fi-rr-envelope"></i>
+                        nexmidgroup@gmail.com
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Suivez-nous</h4>
+                    <a href="https://wa.me/2290153216276" target="_blank">
+                        <i class="fi fi-brands-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#">
+                        <i class="fi fi-brands-facebook"></i> Facebook
+                    </a>
+                    <a href="#">
+                        <i class="fi fi-brands-youtube"></i> YouTube
+                    </a>
+                    <a href="#">
+                        <i class="fi fi-brands-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXMID GROUP — Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+
+</body>
+</html>

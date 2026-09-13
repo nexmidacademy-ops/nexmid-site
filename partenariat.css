@@ -1,0 +1,449 @@
+/* ============================================================
+              PARTENARIAT.CSS — STYLES PAGE PARTENARIAT
+   ============================================================ */
+
+/* ============================================================
+                   1. INTRODUCTION
+   ============================================================ */
+
+.partnership-intro {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.partnership-intro-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.partnership-intro h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.partnership-intro p {
+    font-size: 1.05rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.partnership-highlight {
+    background: var(--light);
+    padding: 20px;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--accent);
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.partnership-highlight i {
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+/* ============================================================
+                   2. ÉTAPES
+   ============================================================ */
+
+.partnership-steps {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.partnership-steps h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--dark);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin: 10px 0;
+}
+
+.step-icon i {
+    font-size: inherit;
+}
+
+.step-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+/* ============================================================
+                   3. COMMISSIONS
+   ============================================================ */
+
+.partnership-commissions {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.partnership-commissions h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.commission-table-wrapper {
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+}
+
+.commission-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.commission-table th {
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.commission-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+.commission-table tr:hover {
+    background: var(--light);
+}
+
+.commission-table td strong {
+    color: var(--primary);
+}
+
+.commission-note {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+.commission-note i {
+    color: var(--secondary);
+    margin-right: 6px;
+}
+
+/* ============================================================
+                   4. POURQUOI DEVENIR PARTENAIRE
+   ============================================================ */
+
+.partnership-why {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.partnership-why h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.partnership-why .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.partnership-why .why-card {
+    background: var(--white);
+    padding: 30px 25px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+.partnership-why .why-card:hover {
+    transform: translateY(-5px);
+}
+
+.partnership-why .why-icon {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.partnership-why .why-icon i {
+    font-size: inherit;
+}
+
+.partnership-why .why-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.partnership-why .why-card p {
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+/* ============================================================
+                   5. FORMULAIRE D'INSCRIPTION
+   ============================================================ */
+
+.partnership-form {
+    padding: 60px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.partnership-form h2 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.partnership-form > .container > p {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.partnership-form-fields {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.partnership-form-fields .form-group {
+    margin-bottom: 18px;
+}
+
+.partnership-form-fields input,
+.partnership-form-fields textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition);
+}
+
+.partnership-form-fields input:focus,
+.partnership-form-fields textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.partnership-form-fields textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.partnership-form-fields button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.form-note i {
+    color: var(--secondary);
+    margin-right: 6px;
+}
+
+/* ============================================================
+                   6. FAQ
+   ============================================================ */
+
+.partnership-faq {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.partnership-faq h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-question span {
+    font-size: 1.2rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.faq-question span i {
+    font-size: inherit;
+}
+
+.faq-question h3 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.faq-answer {
+    padding: 15px 25px 20px;
+}
+
+.faq-answer p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+/* ============================================================
+                   7. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .partnership-intro h2,
+    .partnership-steps h2,
+    .partnership-commissions h2,
+    .partnership-why h2,
+    .partnership-form h2,
+    .partnership-faq h2 {
+        font-size: 1.8rem;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .commission-table th,
+    .commission-table td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .partnership-why .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .faq-question {
+        padding: 15px 20px;
+    }
+
+    .faq-answer {
+        padding: 12px 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partnership-intro h2,
+    .partnership-steps h2,
+    .partnership-commissions h2,
+    .partnership-why h2,
+    .partnership-form h2,
+    .partnership-faq h2 {
+        font-size: 1.6rem;
+    }
+
+    .step-card {
+        padding: 25px 20px;
+    }
+
+    .commission-table th,
+    .commission-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .partnership-why .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partnership-highlight {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXMID SHOP — Détails du produit</title>
+    <meta name="description" content="Découvrez les caractéristiques détaillées de ce produit NEXMID SHOP. Ordinateurs, accessoires, logiciels et matériel informatique.">
+    
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="images/38016.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/38016.jpg" alt="NEXMID GROUP">
+                <span>NEXMID GROUP</span>
+            </a>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="formation.html">Formation</a></li>
+                    <li><a href="shop.html" class="active">Boutique</a></li>
+                    <li><a href="about.html">Mon histoire</a></li>
+                    <li><a href="partenariat.html">Partenariat</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i class="fi fi-rr-menu-burger"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="product-detail">
+        <div class="container">
+
+            <p class="breadcrumb">
+                <a href="shop.html">Boutique</a> &gt; 
+                <span id="productName">Chargement...</span>
+            </p>
+
+            <div class="product-detail-grid">
+
+                <div class="product-detail-images">
+                    <div class="product-main-image">
+                        <img src="images/logo.png" alt="Produit" id="mainImage">
+                    </div>
+                    <div class="product-thumbnails" id="productThumbnails">
+                        <!-- Les miniatures seront générées dynamiquement (1 à 10) -->
+                    </div>
+                </div>
+
+                <div class="product-detail-info">
+                    <div class="product-detail-badges">
+                        <span class="badge reconditionne" id="productEtat">Reconditionné</span>
+                        <span class="badge stock">En stock</span>
+                    </div>
+
+                    <h1 id="productFullName">Chargement...</h1>
+
+                    <p class="product-detail-price" id="productPrice">—</p>
+
+                    <div class="product-detail-specs">
+                        <h3>Caractéristiques</h3>
+                        <ul id="productSpecs">
+                            <li>Chargement...</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-detail-description">
+                        <h3>Description</h3>
+                        <p id="productDescription">Chargement...</p>
+                    </div>
+
+                    <div class="product-detail-actions">
+                        <a href="#" target="_blank" class="btn btn-primary btn-lg" id="whatsappButton">
+                            <i class="fi fi-brands-whatsapp"></i> Acheter sur WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="product-detail-share">
+                        <p>Partager :</p>
+                        <a href="#" target="_blank" id="shareWhatsapp">
+                            <i class="fi fi-brands-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="#" target="_blank" id="shareFacebook">
+                            <i class="fi fi-brands-facebook"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="similar-products">
+        <div class="container">
+            <h2>Produits similaires</h2>
+            <div class="similar-grid" id="similarGrid">
+                <!-- Rempli automatiquement par product.js -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-info">
+                    <h4>NEXMID GROUP</h4>
+                    <p>Abomey-Calavi, Bénin</p>
+                    <p>
+                        <i class="fi fi-rr-phone-call"></i>
+                        +229 01 53 21 62 76
+                    </p>
+                    <p>
+                        <i class="fi fi-rr-envelope"></i>
+                        nexmidgroup@gmail.com
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Suivez-nous</h4>
+                    <a href="https://wa.me/2290153216276" target="_blank">
+                        <i class="fi fi-brands-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="#">
+                        <i class="fi fi-brands-facebook"></i> Facebook
+                    </a>
+                    <a href="#">
+                        <i class="fi fi-brands-youtube"></i> YouTube
+                    </a>
+                    <a href="#">
+                        <i class="fi fi-brands-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXMID GROUP — Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+    <script src="product.js"></script>
+
+</body>
+</html>

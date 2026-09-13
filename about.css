@@ -1,0 +1,620 @@
+/* ============================================================
+              ABOUT.CSS — STYLES PAGE MON HISTOIRE
+   ============================================================ */
+
+/* ============================================================
+                   1. HERO
+   ============================================================ */
+
+.about-hero {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--dark);
+    padding: 4px 16px;
+    border-radius: var(--radius-round);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero-tag i {
+    margin-right: 6px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.hero-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+    margin: 20px 0 30px;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.about-hero-image img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn i {
+    margin-right: 6px;
+}
+
+/* ============================================================
+                   2. TIMELINE
+   ============================================================ */
+
+.about-timeline {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.about-timeline h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--secondary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -33px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary);
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    box-shadow: 0 0 0 3px var(--secondary);
+}
+
+.timeline-dot.future {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+.timeline-content {
+    background: var(--light);
+    padding: 20px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.timeline-year {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 2px 15px;
+    border-radius: var(--radius-round);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.timeline-lesson {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.timeline-lesson i {
+    margin-right: 4px;
+}
+
+/* ============================================================
+                   3. POURQUOI NEXMID
+   ============================================================ */
+
+.about-why {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    background: var(--light);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-icon {
+    font-size: 2.8rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.why-icon i {
+    font-size: inherit;
+}
+
+.why-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+                   4. PHILOSOPHIE
+   ============================================================ */
+
+.about-philosophy {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.about-philosophy h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.philosophy-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
+}
+
+.philosophy-card:hover {
+    transform: translateY(-5px);
+}
+
+.philosophy-icon {
+    font-size: 2.8rem;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.philosophy-icon i {
+    font-size: inherit;
+}
+
+.philosophy-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.philosophy-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+                   5. RÉALISATIONS
+   ============================================================ */
+
+.about-achievements {
+    padding: 60px 0;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.about-achievements h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.achievement-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.achievement-label {
+    font-size: 1rem;
+    opacity: 0.9;
+    color: var(--white);
+}
+
+/* ============================================================
+                   6. TÉMOIGNAGES
+   ============================================================ */
+
+.about-testimonials {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.about-testimonials h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.testimonial-card blockquote {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--dark);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.testimonial-card cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ============================================================
+                   7. CV
+   ============================================================ */
+
+.about-cv {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.cv-wrapper {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+    align-items: start;
+    background: var(--light);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.cv-image img {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.cv-content h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.cv-content > p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.cv-protection {
+    color: var(--secondary) !important;
+    font-weight: 500;
+    margin-bottom: 25px !important;
+}
+
+.cv-protection i {
+    margin-right: 6px;
+}
+
+.cv-form {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.cv-form .form-group {
+    margin-bottom: 15px;
+}
+
+.cv-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition);
+}
+
+.cv-form input:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.cv-form .btn i {
+    margin-right: 6px;
+}
+
+.cv-note {
+    font-size: 0.85rem;
+    color: var(--gray);
+    max-width: 500px;
+}
+
+.cv-note i {
+    color: var(--secondary);
+    margin-right: 6px;
+}
+
+/* ============================================================
+                   8. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 40px 0;
+    }
+
+    .about-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-hero-image {
+        order: -1;
+    }
+
+    .about-hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-quote {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-dot {
+        left: -23px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-content {
+        padding: 15px 20px;
+    }
+
+    .about-timeline h2,
+    .about-why h2,
+    .about-philosophy h2,
+    .about-achievements h2,
+    .about-testimonials h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .achievement-number {
+        font-size: 2.5rem;
+    }
+
+    .cv-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .cv-image {
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    .cv-form {
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 30px 0;
+    }
+
+    .about-hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-quote {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-timeline h2,
+    .about-why h2,
+    .about-philosophy h2,
+    .about-achievements h2,
+    .about-testimonials h2 {
+        font-size: 1.6rem;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .achievement-number {
+        font-size: 2rem;
+    }
+
+    .achievement-label {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-card blockquote {
+        font-size: 0.95rem;
+    }
+
+    .cv-wrapper {
+        padding: 20px;
+    }
+
+    .cv-content h2 {
+        font-size: 1.5rem;
+    }
+}

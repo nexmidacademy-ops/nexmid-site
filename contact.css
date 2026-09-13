@@ -1,0 +1,336 @@
+/* ============================================================
+              CONTACT.CSS — STYLES PAGE CONTACT
+   ============================================================ */
+
+/* ============================================================
+                   1. SECTION CONTACT
+   ============================================================ */
+
+.contact-section {
+    padding: 60px 0;
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* ============================================================
+                   2. COORDONNÉES
+   ============================================================ */
+
+.contact-info h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.contact-details li:last-child {
+    border-bottom: none;
+}
+
+.contact-details li span {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    width: 35px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.contact-details li span i {
+    font-size: inherit;
+}
+
+.contact-details li div {
+    font-size: 0.95rem;
+    color: var(--dark);
+    line-height: 1.5;
+}
+
+.contact-details li strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.contact-buttons {
+    margin-bottom: 20px;
+}
+
+.contact-buttons .btn i {
+    margin-right: 6px;
+}
+
+.contact-social {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-social p {
+    font-weight: 600;
+    color: var(--gray);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.contact-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    color: var(--secondary);
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.contact-social a:hover {
+    color: var(--white);
+    background: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* ============================================================
+                   3. FORMULAIRE
+   ============================================================ */
+
+.contact-form {
+    background: var(--white);
+    padding: 30px 35px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form .btn i {
+    margin-right: 6px;
+}
+
+.contact-form .form-note {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--gray);
+    text-align: center;
+}
+
+#formSuccess {
+    margin-top: 20px;
+    padding: 15px;
+    background: #c6f6d5;
+    color: #22543d;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: 500;
+}
+
+#formSuccess i {
+    margin-right: 6px;
+    color: var(--success);
+}
+
+/* ============================================================
+                   4. MAP
+   ============================================================ */
+
+.contact-map {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.contact-map h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.contact-map > .container > p {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.map-wrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* ============================================================
+                   5. RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-form {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-info h2,
+    .contact-map h2 {
+        font-size: 1.7rem;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-map {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 30px 0;
+    }
+
+    .contact-grid {
+        gap: 30px;
+    }
+
+    .contact-info h2,
+    .contact-map h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info > p {
+        font-size: 0.95rem;
+    }
+
+    .contact-details li {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .contact-details li span {
+        font-size: 1.2rem;
+        width: 28px;
+    }
+
+    .contact-details li div {
+        font-size: 0.9rem;
+    }
+
+    .contact-details li strong {
+        font-size: 0.8rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .contact-social a {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        margin-right: 8px;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
